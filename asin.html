@@ -23,8 +23,7 @@
             
             if (asinMatch && asinMatch[1]) {
                 const asin = asinMatch[1];
-                document.getElementById('asin-result').innerHTML = `ASIN: ${asin} <br> 
-                <a href="https://www.amazon.com/dp/${asin}" target="_blank"></a>`;
+                document.getElementById('asin-result').innerHTML = `ASIN: <a href="https://www.amazon.com/dp/${asin}" target="_blank">${asin}</a>`;
             } else {
                 document.getElementById('asin-result').innerText = "No valid ASIN found.";
             }
