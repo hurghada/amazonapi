@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovative Gallery</title>
+    <title>Innovative Products</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -52,7 +55,7 @@
         /* Hover effect to brighten image */
         .product:hover img {
             filter: brightness(1.2);
-            transform: scale(0.88);
+            transform: scale(1.18);
         }
 
         .product-info {
@@ -66,7 +69,7 @@
             text-align: center;
         }
 
-        .product-info h3 {
+        .product-info h5 {
             margin: 0;
             font-size: 0.5em;
         }
@@ -86,229 +89,67 @@
 <body>
 
 <header>
-    Innovative Amazon Products
+    Innovative Products
 </header>
 
 <div class="gallery-container">
-    <div class="gallery">
+    <div id="product-list" class="gallery">
+       
         <!-- Example product images -->
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        <a class="product" href="http://amazon.com" target="_blank">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-        </a>
-        
         <div class="product">
-            <img src="../img/61ZetaWahGL._AC_SX679_.jpg" alt="Product 2">
+            <a href="https://www.amazon.com/dp/B0CRT29WW1" target="_blank"> <!-- Add your Amazon product link here -->
+                <img src="../img/71yaPXcmmCL._AC_SX679_.jpg" alt="Product 1">
+            </a>
             <div class="product-info">
-                <h3>Camera</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/71yaPXcmmCL._AC_SX679_.jpg" alt="Product 3">
-            <div class="product-info">
-                <h3>$</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 4">
-            <div class="product-info">
-                <h3>Product 4</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 4">
-            <div class="product-info">
-                <h3>Product 4</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 4">
-            <div class="product-info">
-                <h3>Product 4</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-            <div class="product-info">
-                <h3>Product 1</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61ZetaWahGL._AC_SX679_.jpg" alt="Product 2">
-            <div class="product-info">
-                <h3>Product 2</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/71yaPXcmmCL._AC_SX679_.jpg" alt="Product 3">
-            <div class="product-info">
-                <h3>Product 3</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 4">
-            <div class="product-info">
-                <h3>Product 4</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 4">
-            <div class="product-info">
-                <h3>Product 4</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 4">
-            <div class="product-info">
-                <h3>Product 4</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-            <div class="product-info">
-                <h3>Product 1</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61ZetaWahGL._AC_SX679_.jpg" alt="Product 2">
-            <div class="product-info">
-                <h3>Product 2</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/71yaPXcmmCL._AC_SX679_.jpg" alt="Product 3">
-            <div class="product-info">
-                <h3>Product 3</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 4">
-            <div class="product-info">
-                <h3>Product 4</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 4">
-            <div class="product-info">
-                <h3>Product 4</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 4">
-            <div class="product-info">
-                <h3>Product 4</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 1">
-            <div class="product-info">
-                <h3>Product 1</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61ZetaWahGL._AC_SX679_.jpg" alt="Product 2">
-            <div class="product-info">
-                <h3>Product 2</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/71yaPXcmmCL._AC_SX679_.jpg" alt="Product 3">
-            <div class="product-info">
-                <h3>Product 3</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 4">
-            <div class="product-info">
-                <h3>Product 4</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 4">
-            <div class="product-info">
-                <h3>Product 4</h3>
-            </div>
-        </div>
-        <div class="product">
-            <img src="../img/61on-WhfwaL._AC_SX679_.jpg" alt="Product 4">
-            <div class="product-info">
-                <h3>Product 4</h3>
+                <h5>Product 1</h5>
             </div>
         </div>
         <!-- Add more product images as needed -->
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        // URL of the CSV file (make sure this URL is publicly accessible)
+        var csvUrl = 'https://drive.google.com/uc?id=1m1OQ0qxaMqRlE4uVBW5cCM2VCnZoWS_Z'; // Replace with your CSV URL
+        
+        // Load the CSV file
+        $.ajax({
+            url: csvUrl,
+            dataType: 'text'
+        }).done(function(data) {
+            // Split the data into rows
+            var rows = data.split('\n');
+            
+            // Loop through each row, starting from the second one (to skip header)
+            for (var i = 1; i < rows.length; i++) {
+                if (rows[i].trim() === '') continue; // Skip empty rows
+                var columns = rows[i].split(','); // Split by comma
+                
+                // Assuming the first column is ASIN and the second column is image URL
+                var asin = columns[0].trim();
+                var imageUrl = columns[1].trim();
+
+                // Create the product element
+                var productHTML = `
+                    <div class="product">
+                        <a href="https://www.amazon.com/dp/${asin}" target="_blank">
+                            <img src="${imageUrl}" alt="${asin}"  title="${asin}">
+                        </a>
+                        <div class="product-info">
+                            <h5>Product ${asin}</h5>
+                        </div>
+                    </div>
+                `;
+
+                // Append the product to the product list
+                $('#product-list').append(productHTML);
+            }
+        }).fail(function(jqXHR, textStatus, errorThrown) {
+            console.error('Failed to load CSV file:', textStatus, errorThrown);
+        });
+    });
+</script>
 
 </body>
 </html>
