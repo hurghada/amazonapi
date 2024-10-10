@@ -47,7 +47,7 @@
 
         .product img {
             width: 100%;
-            height: auto;
+            height: 100%;
             display: block;
             transition: all 0.3s ease;
         }
@@ -95,58 +95,47 @@
 <div class="gallery-container">
     <div id="product-list" class="gallery">
        
-        <!-- Example product images -->
+        <!-- Example product images
         <div class="product">
-            <a href="https://www.amazon.com/dp/B0CRT29WW1" target="_blank"> <!-- Add your Amazon product link here -->
+            <a href="https://www.amazon.com/dp/B0CRT29WW1" target="_blank">
                 <img src="../img/71yaPXcmmCL._AC_SX679_.jpg" alt="Product 1">
             </a>
             <div class="product-info">
                 <h5>Product 1</h5>
             </div>
         </div>
-        <!-- Add more product images as needed -->
+        Add more product images as needed -->
     </div>
 </div>
 
 <script>
     $(document).ready(function() {
-        // URL of the CSV file (make sure this URL is publicly accessible)
-        var csvUrl = 'https://drive.google.com/uc?id=1m1OQ0qxaMqRlE4uVBW5cCM2VCnZoWS_Z'; // Replace with your CSV URL
-        
-        // Load the CSV file
+        // URL of the JSON file (make sure this URL is publicly accessible)
+        var jsonUrl = 'https://api.npoint.io/e7e8da973e4a5abfa549'; // Replace with your actual JSON URL
+    
+        // Load the JSON file
         $.ajax({
-            url: csvUrl,
-            dataType: 'text'
+            url: jsonUrl,
+            dataType: 'json'
         }).done(function(data) {
-            // Split the data into rows
-            var rows = data.split('\n');
-            
-            // Loop through each row, starting from the second one (to skip header)
-            for (var i = 1; i < rows.length; i++) {
-                if (rows[i].trim() === '') continue; // Skip empty rows
-                var columns = rows[i].split(','); // Split by comma
-                
-                // Assuming the first column is ASIN and the second column is image URL
-                var asin = columns[0].trim();
-                var imageUrl = columns[1].trim();
-
+            // Loop through each product in the JSON array
+            data.forEach(function(product) {
+                // Assuming each product has ASIN and image_url properties
+                var asin = product.ASIN.trim();
+                var imageUrl = product.image_url.trim();
+    
                 // Create the product element
                 var productHTML = `
-                    <div class="product">
-                        <a href="https://www.amazon.com/dp/${asin}" target="_blank">
-                            <img src="${imageUrl}" alt="${asin}"  title="${asin}">
+                        <a class="product" href="https://www.amazon.com/dp/${asin}" target="_blank">
+                            <img src="${imageUrl}" alt="${asin}" title="${asin}">
                         </a>
-                        <div class="product-info">
-                            <h5>Product ${asin}</h5>
-                        </div>
-                    </div>
                 `;
-
+    
                 // Append the product to the product list
                 $('#product-list').append(productHTML);
-            }
+            });
         }).fail(function(jqXHR, textStatus, errorThrown) {
-            console.error('Failed to load CSV file:', textStatus, errorThrown);
+            console.error('Failed to load JSON file:', textStatus, errorThrown);
         });
     });
 </script>
